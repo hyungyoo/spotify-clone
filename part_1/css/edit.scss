@@ -2,8 +2,8 @@
 
 .edit {
   position: absolute;
-  left: 5.6vw;
-  right: 8.8vw;
+  left: 7.2vw;
+  right: 7.2vw;
   top: 8.37%;
   bottom: 1.2%;
   border: 1px solid red;
@@ -21,7 +21,24 @@
     // line-height: 4%;
     font-size: 1.5rem;
     overflow: hidden;
-    background-color: greenyellow;
+    // background-color: greenyellow;
+  }
+
+  &__follow--button {
+    width: 34vw;
+    height: calc(32vw / 381 * 86);
+    margin-top: calc(32vw / 381 * 86);
+    background-color: transparent;
+    border: 1px solid $general-buttom-color;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: $general-font-color;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  &__follow--button:hover {
+    background-color: $general-buttom-color;
   }
 }
 // .edit {
