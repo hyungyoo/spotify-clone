@@ -1,0 +1,27 @@
+/* font color */
+
+$artist-name-text: #696a6b;
+$general-font-color: #ffffff;
+$general-buttom-color: #57b760;
+
+// 미디어쿼리: 컴퓨터화면
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+// 미디어쿼리: 핸드폰
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// 미디어쿼리: 패드
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 24px;
+  }
+}
+

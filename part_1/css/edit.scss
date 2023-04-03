@@ -1,0 +1,46 @@
+@import "variables";
+
+.edit {
+  position: absolute;
+  left: 5.6vw;
+  right: 8.8vw;
+  top: 8.37%;
+  bottom: 1.2%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__artwork--image {
+    width: 68vw;
+    padding: 5%;
+  }
+
+  &__artwork--text {
+    height: 4%;
+    // line-height: 4%;
+    font-size: 1.5rem;
+    overflow: hidden;
+    background-color: greenyellow;
+  }
+}
+// .edit {
+//   position: absolute;
+//   left: 5.6vw;
+//   right: 8.8vw;
+//   top: 8.37%;
+//   bottom: 1.2%;
+//   border: 1px solid red;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .edit .edit__artwork--image {
+//   width: 68vw;
+//   padding: 5%;
+// }
+
+// .edit .edit__artwork--text {
+//   font-size: 1.5rem;
+// }
