@@ -14,14 +14,12 @@
     font-size: 24px;
   }
 }
-.edit {
-  position: absolute;
-  left: 7.2vw;
-  right: 7.2vw;
-  top: 8.37%;
-  bottom: 1.2%;
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}/*# sourceMappingURL=edit.css.map */
+.artwork-image {
+  width: 68vw;
+  padding: 5%;
+}
+.artwork-text {
+  height: 4%;
+  font-size: 1.5rem;
+  overflow: hidden;
+}/*# sourceMappingURL=artwork.css.map */

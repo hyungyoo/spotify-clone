@@ -10,36 +10,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &__artwork--image {
-    width: 68vw;
-    padding: 5%;
-  }
-
-  &__artwork--text {
-    height: 4%;
-    // line-height: 4%;
-    font-size: 1.5rem;
-    overflow: hidden;
-    // background-color: greenyellow;
-  }
-
-  &__follow--button {
-    width: 34vw;
-    height: calc(32vw / 381 * 86);
-    margin-top: calc(32vw / 381 * 86);
-    background-color: transparent;
-    border: 1px solid $general-buttom-color;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: $general-font-color;
-    font-style: normal;
-    font-weight: 700;
-  }
-
-  &__follow--button:hover {
-    background-color: $general-buttom-color;
-  }
 }
 // .edit {
 //   position: absolute;

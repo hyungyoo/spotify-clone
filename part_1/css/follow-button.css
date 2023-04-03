@@ -1,0 +1,33 @@
+/* font color */
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 24px;
+  }
+}
+.follow-button {
+  width: 34vw;
+  height: 7.2230971129vw;
+  margin-top: 7.2230971129vw;
+  background-color: transparent;
+  border: 1px solid #57b760;
+  border-radius: 20px;
+}
+.follow-button--text {
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+}
+.follow-button:hover {
+  background-color: #57b760;
+}/*# sourceMappingURL=follow-button.css.map */
