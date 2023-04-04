@@ -1,7 +1,7 @@
-// Gulp 모듈 로드
+// Load Gulp modules
 const gulp = require("gulp");
 
-// Sass 컴파일러 모듈 로드
+// Load Sass compiler module
 const sass = require("gulp-sass")(require("sass"));
 
 gulp.task("sass", function () {
@@ -11,10 +11,10 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("./dist/css"));
 });
 
-// 파일 변경 감지 및 자동 변환
+// Detect file changes and automatically covert to css
 gulp.task("watch", function () {
   gulp.watch("./scss/*.scss", gulp.series("sass"));
 });
 
-// 기본 작업 설정
+// Set defaul task
 gulp.task("default", gulp.series("watch"));

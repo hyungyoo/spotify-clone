@@ -4,21 +4,22 @@ $artist-name-text: #696a6b;
 $general-font-color: #ffffff;
 $general-buttom-color: #57b760;
 
-// 미디어쿼리: 컴퓨터화면
+// Media Query
+// Desktop screen
 @media screen and (min-width: 1024px) {
   html {
     font-size: 32px;
   }
 }
 
-// 미디어쿼리: 핸드폰
+// Smart phone
 @media screen and (max-width: 767px) {
   html {
     font-size: 16px;
   }
 }
 
-// 미디어쿼리: 패드
+// Tablet
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   html {
     font-size: 24px;
