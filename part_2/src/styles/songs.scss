@@ -1,0 +1,51 @@
+@import "variables";
+
+.songs {
+  width: calc(100vw * 963.07 / 1125);
+  overflow-y: scroll;
+  height: calc(100vw * 800 / 1125);
+}
+
+.song {
+  @extend .flex-space-between;
+  width: inherit;
+  height: calc(100vw * 112.6 / 1125);
+  padding: 9.5% 0;
+
+  &__text {
+    @extend .flex-space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    height: inherit;
+    &--song-name {
+      font-size: 0.9rem;
+    }
+    &--artist {
+      color: $artist-name-text;
+      font-size: 0.7rem;
+    }
+  }
+
+  &__button {
+    height: inherit;
+    width: 3%;
+
+    &--hamburger {
+      cursor: pointer;
+
+      span {
+        display: block;
+        width: 50%;
+        height: 10%;
+        background-color: $artist-name-text;
+        margin-top: 80%;
+        top: 0;
+        border-radius: 50%;
+      }
+    }
+
+    input {
+      display: none;
+    }
+  }
+}

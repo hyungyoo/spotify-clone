@@ -1,0 +1,39 @@
+/* font color */
+
+$artist-name-text: #696a6b;
+$general-font-color: #ffffff;
+$general-buttom-color: #57b760;
+
+// Media Query
+// Desktop screen
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+// Smart phone
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+// Tablet
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

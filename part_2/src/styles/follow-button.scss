@@ -1,0 +1,22 @@
+@import "variables";
+
+.follow-button {
+  width: 34vw;
+  height: calc(34vw / 381 * 86);
+  margin-top: 10%;
+  background-color: transparent;
+  border: 1px solid $general-buttom-color;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &__text {
+    font-size: 0.6rem;
+    color: $general-font-color;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $general-buttom-color;
+  }
+}
