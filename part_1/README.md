@@ -85,4 +85,4 @@ Il est possible de compiler les fichiers SCSS en fichiers CSS et de créer une v
 ### Image implémentée
 
 </br>
-<img src="https://user-images.githubusercontent.com/71254925/229837749-399a45e8-cabf-4cb4-a4c2-c8edf695ee99.png" alt="Spotify Mockup" width="300" >
+<img src="https://user-images.githubusercontent.com/71254925/229900218-5f221293-5679-477f-af4c-654479273622.png" alt="Spotify Mockup" width="300" >
