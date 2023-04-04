@@ -3,7 +3,7 @@
 .artist-name {
   @extend .flex-center;
   color: $artist-name-text;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   margin: calc(100vw / 1125 * 40) 0;
   height: calc(100vw / 1125 * 40);
 }

@@ -3,12 +3,12 @@
 .download {
   @extend .flex-space-between;
   margin-top: 5%;
+  margin-bottom: 3%;
   width: calc(961.67 * 100vw / 1125);
   height: calc(80 * 100vw / 1125);
-  //   background-color: yellowgreen;
 
   &__text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-left: 3%;
   }
 
@@ -30,8 +30,8 @@
     &--toggle:before {
       position: absolute;
       content: "";
-      width: 60%;
-      height: 110%;
+      width: 65%;
+      height: 115%;
       border-radius: 50%;
       background-color: rgb(168, 168, 168);
       transition: 0.2s;

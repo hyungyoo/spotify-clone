@@ -1,0 +1,16 @@
+@import "variables";
+
+.songs {
+  @extend .flex-center;
+  flex-direction: column;
+  width: calc(100vw * 963.07 / 1125);
+}
+
+.song {
+  @extend .flex-space-between;
+  width: inherit;
+  background-color: greenyellow;
+  height: calc(100vw * 112.6 / 1125);
+  border: 1px solid red;
+  margin: 4% 0;
+}
