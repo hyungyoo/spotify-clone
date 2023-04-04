@@ -4,6 +4,7 @@
   @extend .flex-center;
   color: $artist-name-text;
   font-size: 0.6rem;
-  margin: calc(100vw / 1125 * 40) 0;
+  margin-top: calc(100vw / 1125 * 40);
+  margin-bottom: 8%;
   height: calc(100vw / 1125 * 40);
 }

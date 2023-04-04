@@ -1,3 +1,4 @@
+
 install:
 	npm install
 
@@ -9,4 +10,4 @@ open:
 
 all: install build open
 
-.PHONY: install build open run
+.PHONY:  install build open run

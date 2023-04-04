@@ -4,13 +4,29 @@
   @extend .flex-center;
   flex-direction: column;
   width: calc(100vw * 963.07 / 1125);
+  overflow: auto;
+  background-color: yellowgreen;
+  height: calc(100vw * 800 / 1125);
 }
 
 .song {
   @extend .flex-space-between;
   width: inherit;
-  background-color: greenyellow;
   height: calc(100vw * 112.6 / 1125);
   border: 1px solid red;
-  margin: 4% 0;
+  padding: 9% 0;
+
+  &__text {
+    @extend .flex-space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    height: inherit;
+    &--song-name {
+      font-size: 0.9rem;
+    }
+    &--artist {
+      color: $artist-name-text;
+      font-size: 0.7rem;
+    }
+  }
 }
