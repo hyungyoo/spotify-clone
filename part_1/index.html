@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="dist/css/follow-button.css" />
     <link rel="stylesheet" href="dist/css/artist-name.css" />
     <link rel="stylesheet" href="dist/css/play-button.css" />
+    <link rel="stylesheet" href="dist/css/download.css" />
     <title>Document</title>
   </head>
   <body>
@@ -25,11 +26,25 @@
         <button class="play-button">
           <div class="play-button__text">SHUFFLE PLAY</div>
         </button>
+        <div class="download">
+          <div class="download__text">Download</div>
+          <div class="download__button">
+            <input type="checkbox" id="check"></input>
+            <label for="check" class="download__button--toggle"></label>
+          </div>
+        </div>
+        <div class="songs">
+          <div class="songs__song"></div>
+        </div>
       </div>
 
       <div class="bg__group"></div>
       <div class="bg__artwork-copy"></div>
       <div class="bg__gradient-fill"></div>
     </div>
+
+    <script>
+      console.log("hello");
+    </script>
   </body>
 </html>

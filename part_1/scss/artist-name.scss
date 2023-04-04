@@ -1,10 +1,9 @@
 @import "variables";
 
 .artist-name {
-  @extend .flex-text;
+  @extend .flex-center;
   color: $artist-name-text;
   font-size: 0.7rem;
-  //   background-color: yellowgreen;
   margin: calc(100vw / 1125 * 40) 0;
   height: calc(100vw / 1125 * 40);
 }

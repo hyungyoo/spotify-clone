@@ -1,7 +1,7 @@
 @import "variables";
 
 .play-button {
-  @extend .flex-text;
+  @extend .flex-center;
   width: calc(100vw * 727.9 / 1125);
   height: calc(100vw / 1125 * 156.6);
   background: $general-buttom-color;
