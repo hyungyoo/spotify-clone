@@ -3,6 +3,7 @@
 .download {
   @extend .flex-space-between;
   margin-top: 7%;
+  margin-bottom: 5%;
   width: calc(961.67 * 100vw / 1125);
   height: calc(80 * 100vw / 1125);
 
@@ -14,7 +15,7 @@
   &__button {
     @extend .flex-center;
     justify-content: flex-end;
-    width: 30%;
+    width: 35%;
     height: 80%;
     &--toggle {
       background-color: rgb(65, 65, 65);
@@ -28,16 +29,17 @@
 
     &--toggle:before {
       position: absolute;
+      top: -20%;
       content: "";
-      width: 65%;
-      height: 115%;
+      width: 60%;
+      height: 150%;
       border-radius: 50%;
       background-color: rgb(168, 168, 168);
       transition: 0.2s;
     }
 
     input:checked + &--toggle::before {
-      transform: translateX(90%);
+      transform: translateX(70%);
     }
 
     input {

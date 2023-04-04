@@ -5,9 +5,6 @@ install:
 build:
 	gulp
 
-open:
-	open index.html
+all: install build 
 
-all: install build open
-
-.PHONY:  install build open run
+.PHONY:  install build all
