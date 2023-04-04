@@ -1,11 +1,8 @@
 @import "variables";
 
 .songs {
-  @extend .flex-center;
-  flex-direction: column;
   width: calc(100vw * 963.07 / 1125);
-  overflow: auto;
-  background-color: yellowgreen;
+  overflow-y: scroll;
   height: calc(100vw * 800 / 1125);
 }
 
