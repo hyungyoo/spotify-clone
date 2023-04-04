@@ -1,6 +1,8 @@
-BEM
-gulp
-module
-scss : extend, nest, import...
-폰트사이즈는 미디어쿼리를 상대적으로
-html css 숙련도를 보는것이니 이걸로만했음
+1. BEM 으로 css 구현
+2. gulp 으로 scss 컴파일
+3. 모듈화를 생각해서 css혹은 scss를사용함
+
+4. scss : extend, nest등 scss가 사용되야하는이유
+
+5. 폰트사이즈는 미디어쿼리를 기준으로 구현함. 화면이커질때 너무 클씨가 커질수있어서
+6. html css 숙련도를 보는것이니 이걸로만했음(자바스크립트나 다른걸 안씀)
