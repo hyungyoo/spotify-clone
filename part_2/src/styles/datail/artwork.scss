@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.artwork {
+  &-image {
+    width: 68vw;
+    padding: 8vw;
+  }
+
+  &-text {
+    @extend .flex-center;
+    height: 4%;
+    font-size: 1.4rem;
+    overflow: hidden;
+  }
+}

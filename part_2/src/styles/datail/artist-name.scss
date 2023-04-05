@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.artist-name {
+  @extend .flex-center;
+  color: $artist-name-text;
+  font-size: 0.6rem;
+  margin-top: calc(100vw / 1125 * 40);
+  margin-bottom: 8%;
+  height: calc(100vw / 1125 * 40);
+}
