@@ -1,26 +1,27 @@
 import React from "react";
 import useSearchPlaylists from "../../hooks/useSearchPlaylists";
 import { Link } from "react-router-dom";
+import { PlaylistType } from "../../interfaces/playlist";
 
 export const Playlists = ({ searchInput }: any) => {
-  const { playlists } = useSearchPlaylists(searchInput);
+  const { playlists, isError, isLoading } = useSearchPlaylists(searchInput);
 
-  console.log("in playlists", playlists);
   return (
     <div>
-      <h1>Playlists</h1>
       <ul>
         {playlists &&
-          playlists.map((playlist: any) => {
+          playlists.map((playlist: PlaylistType) => {
             return (
-              <div key={playlist?.id}>
+              <li key={playlist.id}>
                 <Link
-                  to={{ pathname: `/playlist/${playlist.name}` }}
-                  state={{ href: playlist.href }}
+                  to={{
+                    pathname: `/playlist/${encodeURIComponent(playlist?.name)}`,
+                  }}
+                  state={{ apiEndpoint: playlist?.href }}
                 >
                   {playlist.name}
                 </Link>
-              </div>
+              </li>
             );
           })}
       </ul>

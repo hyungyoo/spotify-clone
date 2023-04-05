@@ -5,7 +5,7 @@ import { Playlists } from "../components/Home/Playlists";
 
 export const Home = () => {
   const [searchInput, setSearchInput] = useState("");
-  const { isError, isLoading } = useSearchPlaylists(searchInput);
+  const { playlists, isError, isLoading } = useSearchPlaylists(searchInput);
 
   if (isError) return <div>is Error</div>;
   if (isLoading) return <div>is Loading...</div>;

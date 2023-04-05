@@ -5,14 +5,6 @@ type Props = {
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
-// const useInput = <T = any>(initialData: T): ReturnTypes<T> => {
-//     const [value, setValue] = useState(initialData);
-//     const handler = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-//       setValue(e.target.value as unknown as T);
-//     }, []);
-//     return [value, handler, setValue];
-//   };
-
 export const SearchBox = ({ setSearchInput }: Props) => {
   const [value, handler, setValue] = useInput("");
   const inputRef = useRef<HTMLInputElement | null>(null);

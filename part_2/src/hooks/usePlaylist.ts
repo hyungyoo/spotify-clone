@@ -1,7 +1,7 @@
 import useSWRImmutable from "swr/immutable";
 
-const usePlaylist = (url: string | undefined) => {
-  const { data, isLoading, error } = useSWRImmutable(url);
+const usePlaylist = (apiEndpoint: string) => {
+  const { data, isLoading, error } = useSWRImmutable(apiEndpoint);
   return {
     playlist: data,
     isLoading,
