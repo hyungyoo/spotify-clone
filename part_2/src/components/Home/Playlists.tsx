@@ -14,7 +14,10 @@ export const Playlists = ({ searchInput }: any) => {
           playlists.map((playlist: any) => {
             return (
               <div key={playlist?.id}>
-                <Link to={{}} state={playlist.href}>
+                <Link
+                  to={{ pathname: `/playlist/${playlist.name}` }}
+                  state={{ href: playlist.href }}
+                >
                   {playlist.name}
                 </Link>
               </div>
