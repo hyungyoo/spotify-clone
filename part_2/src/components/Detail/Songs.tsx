@@ -11,19 +11,20 @@ export const Songs = ({ apiEndpoint }: { apiEndpoint: string }) => {
   if (isError) return <div>Error...</div>;
   return (
     <ul className="songs">
-      {playlist?.tracks?.items.map((item: ItemType) => {
-        return (
-          <li className="song" key={item.track.external_ids.isrc}>
-            <div className="song__text">
-              <div className="song__text__song-name">
-                {item?.track?.album?.name}
+      {playlist &&
+        playlist.tracks?.items.map((item: ItemType) => {
+          return (
+            <li className="song" key={item.track.external_ids.isrc}>
+              <div className="song__text">
+                <div className="song__text__song-name">
+                  {item.track?.album?.name}
+                </div>
+                <div className="song__text__artist">{item.track?.name}</div>
               </div>
-              <div className="song__text__artist">{item?.track?.name}</div>
-            </div>
-            <HamburgerButton />
-          </li>
-        );
-      })}
+              <HamburgerButton />
+            </li>
+          );
+        })}
     </ul>
   );
 };

@@ -15,9 +15,8 @@ export const PlaylistInfo = ({ apiEndpoint }: { apiEndpoint: string }) => {
     <React.Fragment>
       <img className="artwork-image" src={playlist?.images[0]?.url} />
       <div className="artwork-text">
-        {" "}
         {playlist?.name.length > 20
-          ? playlist.name.slice(0, 20) + "..."
+          ? playlist?.name.slice(0, 20) + "..."
           : playlist?.name}
       </div>
       <button className="follow-button">
