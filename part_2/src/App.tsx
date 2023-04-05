@@ -10,7 +10,7 @@ function App() {
     <SWRConfig value={{ fetcher }}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/playlist/:name" element={<Detail />} />
+        <Route path="/playlist/:playlistName" element={<Detail />} />
       </Routes>
     </SWRConfig>
   );

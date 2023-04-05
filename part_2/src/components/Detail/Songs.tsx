@@ -1,14 +1,11 @@
-import React from "react";
-import usePlaylist from "../../hooks/usePlaylist";
 import { HamburgerButton } from "./HamburgerButton";
 import "../../styles/datail/songs.scss";
 import { ItemType } from "../../interfaces/playlist";
+import useSWRImmutable from "swr/immutable";
 
 export const Songs = ({ apiEndpoint }: { apiEndpoint: string }) => {
-  const { playlist, isLoading, isError } = usePlaylist(apiEndpoint);
+  const { data: playlist } = useSWRImmutable(apiEndpoint);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
   return (
     <ul className="songs">
       {playlist &&

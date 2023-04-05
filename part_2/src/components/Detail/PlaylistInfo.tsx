@@ -1,19 +1,17 @@
 import React from "react";
-import usePlaylist from "../../hooks/usePlaylist";
-import "../../styles/datail/artist-name.scss";
-import "../../styles/datail/artwork.scss";
-import "../../styles/datail/download.scss";
-import "../../styles/datail/follow-button.scss";
-import "../../styles/datail/play-button.scss";
+import "../../styles/datail/play-info.scss";
+import useSWRImmutable from "swr/immutable";
 
 export const PlaylistInfo = ({ apiEndpoint }: { apiEndpoint: string }) => {
-  const { playlist, isLoading, isError } = usePlaylist(apiEndpoint);
+  const { data: playlist } = useSWRImmutable(apiEndpoint);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error...</div>;
   return (
     <React.Fragment>
-      <img className="artwork-image" src={playlist?.images[0]?.url} />
+      <img
+        className="artwork-image"
+        src={playlist?.images[0]?.url}
+        alt="artwork.png"
+      />
       <div className="artwork-text">
         {playlist?.name.length > 20
           ? playlist?.name.slice(0, 20) + "..."

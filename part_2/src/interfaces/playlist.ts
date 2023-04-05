@@ -15,6 +15,13 @@ export interface PlaylistType {
   uri: string;
 }
 
+export interface ItemType {
+  added_at: string;
+  added_by: AddedBy;
+  is_local: boolean;
+  track: Track;
+}
+
 export interface ExternalUrls {
   spotify: string;
 }
@@ -57,13 +64,6 @@ export interface Tracks {
   previous: string;
   total: number;
   items: ItemType[];
-}
-
-export interface ItemType {
-  added_at: string;
-  added_by: AddedBy;
-  is_local: boolean;
-  track: Track;
 }
 
 export interface AddedBy {

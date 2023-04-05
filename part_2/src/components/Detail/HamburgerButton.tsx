@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/datail/songs.scss";
 
 export const HamburgerButton = () => {

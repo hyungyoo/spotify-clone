@@ -1,5 +1,4 @@
 import "../../styles/datail/background.scss";
-import "../../styles/datail/edit.scss";
 
 export const Background = (props: React.PropsWithChildren) => {
   return (

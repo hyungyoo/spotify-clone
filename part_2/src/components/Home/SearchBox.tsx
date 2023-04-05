@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import useInput from "../../hooks/useInput";
 
 type Props = {
@@ -15,7 +15,7 @@ export const SearchBox = ({ setSearchInput }: Props) => {
       setSearchInput(value);
       setValue("");
     },
-    [value]
+    [value, setSearchInput, setValue]
   );
 
   useEffect(() => {

@@ -45,3 +45,14 @@
     z-index: -1;
   }
 }
+
+.edit {
+  position: absolute;
+  left: 7.2vw;
+  right: 7.2vw;
+  top: 8.37%;
+  bottom: 1.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

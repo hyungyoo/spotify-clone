@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { PlaylistType } from "../../interfaces/playlist";
 
 export const Playlists = ({ searchInput }: any) => {
-  const { playlists, isError, isLoading } = useSearchPlaylists(searchInput);
+  const { playlists } = useSearchPlaylists(searchInput);
 
   return (
     <div>
