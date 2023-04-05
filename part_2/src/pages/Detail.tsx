@@ -1,10 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import usePlaylist from "../hooks/usePlaylist";
 
-export const Detail = () => {
-  const { id } = useParams();
-  const { playlist, isLoading, isError } = usePlaylist(undefined);
+export const Detail = ({ href }: { href: string }) => {
+  const { playlist, isLoading, isError } = usePlaylist(href);
 
-  return <div>{id}</div>;
+  console.log("in detail", playlist);
+  return <div>detail</div>;
 };

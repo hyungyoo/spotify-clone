@@ -1,14 +1,18 @@
-import React from "react";
+import { useState } from "react";
 import useSearchPlaylists from "../hooks/useSearchPlaylists";
-import { Detail } from "./Detail";
+import { SearchBox } from "../components/Home/SearchBox";
+import { Playlists } from "../components/Home/Playlists";
 
 export const Home = () => {
-  const { playlists, isError, isLoading } = useSearchPlaylists("Taylor");
+  const [searchInput, setSearchInput] = useState("");
+  const { isError, isLoading } = useSearchPlaylists(searchInput);
 
-  console.log(playlists);
+  if (isError) return <div>is Error</div>;
+  if (isLoading) return <div>is Loading...</div>;
   return (
     <div>
-      <Detail />
+      <SearchBox setSearchInput={setSearchInput} />
+      <Playlists searchInput={searchInput} />
     </div>
   );
 };
