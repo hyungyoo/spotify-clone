@@ -3,9 +3,10 @@ import Cookies from "js-cookie";
 import base64 from "base-64";
 
 /**
- * 스포티파이에 접근토큰을 요청함
- * client id와 client secret를 이용하여,
- * https://accounts.spotify.com/api/token에 요청을 보내 접근토큰과 expires_in을 반환받음
+ * Request an access token to Spotify.
+ * Using the client ID and client secret,
+ * send a request to https://accounts.spotify.com/api/token
+ * and receive an access token and expires_in.
  * @returns access_token, expires_in
  */
 const refresh = async () => {
@@ -31,10 +32,13 @@ const refresh = async () => {
 };
 
 /**
- * axios 인터셉터
- * 쿠키에서 접근토큰을 조회후,
- * 쿠키에 접근토큰이있다면, 헤더에 추가하여 요청 
- * 없다면 새로발급받아, 다시 재귀하여 함수로 복귀하여 쿠키를 통해 토큰을 얻은후 헤더에 추가
+ * axios interceptor:
+ * Retrieves the access token from cookies.
+ * If there is an access token in the cookie,
+ * it adds it to the request header.
+ * If there is no access token in the cookie,
+ * it recursively calls a function to get a new access token,
+ * adds it to the header, and returns to the original function to retry the request.
  * @param config InternalAxiosRequestConfig
  * @returns Promise<InternalAxiosRequestConfig>
  */

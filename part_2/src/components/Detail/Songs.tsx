@@ -11,7 +11,7 @@ export const Songs = ({ apiEndpoint }: { apiEndpoint: string }) => {
       {playlist &&
         playlist.tracks?.items.map((item: ItemType, index: number) => {
           const key = item?.track.external_ids?.isrc
-            ? item?.track.external_ids?.isrc
+            ? item?.track?.external_ids?.isrc
             : index;
           return (
             <li className="song" key={key}>
