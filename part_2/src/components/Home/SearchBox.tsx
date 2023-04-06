@@ -25,15 +25,21 @@ export const SearchBox = ({ setSearchInput }: Props) => {
 
   return (
     <div className="searchBox">
-      <form onSubmit={handleSubmit}>
+      <label htmlFor="searchBox" className="searchBox__label">
+        Rechercher une playlist dans Spotify
+      </label>
+      <form onSubmit={handleSubmit} className="searchBox__submit">
         <input
+          className="searchBox__submit-input"
           type="text"
           placeholder="검색할 플레이리스트"
           value={value}
           onChange={handler}
           ref={inputRef}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className="searchBox__submit-button">
+          Rechercher
+        </button>
       </form>
     </div>
   );

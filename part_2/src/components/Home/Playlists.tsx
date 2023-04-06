@@ -1,5 +1,4 @@
 import useSearchPlaylists from "../../hooks/useSearchPlaylists";
-import { Link } from "react-router-dom";
 import { PlaylistType } from "../../interfaces/playlist";
 import "../../styles/home/playlist.scss";
 
@@ -13,14 +12,8 @@ export const Playlists = ({ searchInput }: any) => {
           playlists.map((playlist: PlaylistType) => {
             return (
               <li key={playlist.id}>
-                <Link
-                  to={{
-                    pathname: `/playlist/${encodeURIComponent(playlist?.name)}`,
-                  }}
-                  state={{ apiEndpoint: playlist?.href }}
-                >
-                  {playlist.name}
-                </Link>
+                <div>{playlist.name}</div>
+                <button>voir</button>
               </li>
             );
           })}
@@ -28,3 +21,12 @@ export const Playlists = ({ searchInput }: any) => {
     </div>
   );
 };
+
+// <Link
+// to={{
+//   pathname: `/playlist/${encodeURIComponent(playlist?.name)}`,
+// }}
+// state={{ apiEndpoint: playlist?.href }}
+// >
+// {playlist.name}
+// </Link>

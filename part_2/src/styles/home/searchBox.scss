@@ -1,5 +1,48 @@
 @import "../variables.scss";
 
 .searchBox {
-  background: rgb(151, 151, 10);
+  @extend .home-item;
+  font-size: 1rem;
+  height: 20%;
+  padding: 3%;
+
+  &__label {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
+  &__submit {
+    width: 80%;
+    height: 30%;
+    margin-top: 1%;
+    &-input {
+      height: 100%;
+      width: 80%;
+      border-radius: 15px 0 0 15px;
+      border: none;
+      outline: none;
+    }
+    &-button {
+      border: none;
+      border-radius: 0 15px 15px 0;
+      height: 100%;
+      width: 18%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchBox {
+    &__submit {
+      width: 100%;
+      font-size: 0.2rem;
+      margin-top: 5%;
+      &-input {
+        width: 58%;
+      }
+      &-button {
+        width: 40%;
+      }
+    }
+  }
 }
