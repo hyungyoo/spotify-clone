@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import useInput from "../../hooks/useInput";
+import "../../styles/home/searchBox.scss";
 
 type Props = {
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
@@ -23,15 +24,17 @@ export const SearchBox = ({ setSearchInput }: Props) => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="검색할 플레이리스트"
-        value={value}
-        onChange={handler}
-        ref={inputRef}
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="searchBox">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="검색할 플레이리스트"
+          value={value}
+          onChange={handler}
+          ref={inputRef}
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
   );
 };

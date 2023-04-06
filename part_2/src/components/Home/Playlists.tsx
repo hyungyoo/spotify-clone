@@ -1,13 +1,13 @@
-import React from "react";
 import useSearchPlaylists from "../../hooks/useSearchPlaylists";
 import { Link } from "react-router-dom";
 import { PlaylistType } from "../../interfaces/playlist";
+import "../../styles/home/playlist.scss";
 
 export const Playlists = ({ searchInput }: any) => {
   const { playlists } = useSearchPlaylists(searchInput);
 
   return (
-    <div>
+    <div className="playlist">
       <ul>
         {playlists &&
           playlists.map((playlist: PlaylistType) => {

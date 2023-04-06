@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.home {
+  @extend .flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../../../public/spotify.jpeg");
+  background-size: cover;
+  filter: grayscale(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
