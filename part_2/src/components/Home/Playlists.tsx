@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import useSearchPlaylists from "../../hooks/useSearchPlaylists";
 import { PlaylistType } from "../../interfaces/playlist";
 import "../../styles/home/playlists.scss";
@@ -8,7 +9,19 @@ type Props = {
 };
 
 export const Playlists = ({ searchInput }: Props) => {
-  const { playlists, total } = useSearchPlaylists(searchInput);
+  const { playlists, total, size, setSize } = useSearchPlaylists(searchInput);
+
+  const onScroll = useCallback(
+    (event: React.UIEvent<HTMLDivElement>) => {
+      if (
+        event.currentTarget.scrollTop + event.currentTarget.clientHeight ===
+        event.currentTarget.scrollHeight
+      ) {
+        setSize(size + 1);
+      }
+    },
+    [size, setSize]
+  );
 
   return (
     <div className="playlists">
@@ -17,7 +30,7 @@ export const Playlists = ({ searchInput }: Props) => {
           ? `${total} Résultats trouvés`
           : `Veuillez faire une recherche`}
       </div>
-      <div className="playlists__list">
+      <div className="playlists__list" onScroll={onScroll}>
         <ul>
           {playlists &&
             playlists.map((playlist: PlaylistType) => {

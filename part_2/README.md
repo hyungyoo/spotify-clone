@@ -52,7 +52,6 @@ No issues found.
 </br>
 </br>
 
-
 ## 4.File tree
 
 ```js
@@ -175,7 +174,6 @@ export default fetcher;
 
 Ce fetcher est utilisé comme fetcher pour useSWR.
 
-
 </br>
 </br>
 
@@ -187,9 +185,7 @@ En gérant l'accès token et les données de la playlist globalement, on peut é
 
 </br>
 
-
 > https://swr.vercel.app/ko/docs/getting-started#%EC%9E%AC%EC%82%AC%EC%9A%A9-%EA%B0%80%EB%8A%A5%ED%95%98%EA%B2%8C-%EB%A7%8C%EB%93%A4%EA%B8%B0
-
 
 </br>
 En revanche, useSWR met automatiquement à jour les données. Pour supprimer cette fonctionnalité, effectuer les paramétres suivants.
@@ -224,4 +220,41 @@ function App() {
     </SWRConfig>
   );
 }
+```
+
+</br>
+</br>
+
+## 7. useSWRInfinite
+
+La fonction useSearchPlaylists utilise le hook useSWRInfinite pour implémenter le défilement infini de pagination.
+
+```js
+/* key generateur pour une clé unique pour chaque page afin d'implémenter une pagination infinie avec SWR. */
+const getKey = (
+  pageIndex: number,
+  previousPageData: any,
+  searchValue: string
+) => {
+  if (
+    (previousPageData && !previousPageData.playlists.next) ||
+    searchValue === ""
+  )
+    return null;
+
+  const offset = pageIndex * PAGE_SIZE;
+  return `https://api.spotify.com/v1/search?q=${searchValue}&type=playlist&offset=${offset}&limit=${PAGE_SIZE}`;
+};
+
+/* La fonction useSearchPlaylists utilise le hook useSWRInfinite pour implémenter le défilement infini de pagination. */
+const useSearchPlaylists = (searchValue: string) => {
+  const { data, isLoading, error, setSize, size } = useSWRInfinite(
+    (pageIndex, previousPageData) =>
+      getKey(pageIndex, previousPageData, searchValue)
+  );
+
+  const playlists = data ? data.flatMap((page) => page.playlists.items) : [];
+  const total = data ? data[0].playlists.total : 0;
+  return { playlists, total, isLoading, isError: error, setSize, size };
+};
 ```
