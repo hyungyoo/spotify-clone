@@ -25,12 +25,13 @@ export const SearchBox = ({ setSearchInput }: Props) => {
 
   return (
     <div className="searchBox">
-      <label htmlFor="searchBox" className="searchBox__label">
+      <label htmlFor="searchBox__submit-input" className="searchBox__label">
         Rechercher une playlist dans Spotify
       </label>
       <form onSubmit={handleSubmit} className="searchBox__submit">
         <input
           className="searchBox__submit-input"
+          id="searchBox__submit-input"
           type="text"
           placeholder="검색할 플레이리스트"
           value={value}

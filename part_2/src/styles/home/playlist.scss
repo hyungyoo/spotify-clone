@@ -2,7 +2,12 @@
 
 .playlist {
   @extend .flex-center;
+  flex-direction: column;
   @extend .home-item;
   height: 60%;
   border: 2px solid red;
+  padding: 10%;
+
+  //   &__text {
+  //   }
 }

@@ -8,6 +8,7 @@ const useSearchPlaylists = (searchValue: string) => {
   );
   return {
     playlists: data?.playlists?.items,
+    total: data?.playlists.total,
     isLoading,
     isError: error,
   };
