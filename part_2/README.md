@@ -34,6 +34,9 @@ REACT_APP_CLIENT_SECRET="client_secret"
 ## 3.Comment exécuter
 
 ```zsh
+$> npm install
+...
+...
 $> npm run start
 Compiled successfully!
 

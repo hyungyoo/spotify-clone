@@ -17,4 +17,4 @@ gulp.task("watch", function () {
 });
 
 // Set defaul task
-gulp.task("default", gulp.series("watch"));
+gulp.task("default", gulp.series("sass", "watch"));

@@ -33,7 +33,7 @@ export const SearchBox = ({ setSearchInput }: Props) => {
           className="searchBox__submit-input"
           id="searchBox__submit-input"
           type="text"
-          placeholder="검색할 플레이리스트"
+          placeholder="ex) taylor"
           value={value}
           onChange={handler}
           ref={inputRef}
