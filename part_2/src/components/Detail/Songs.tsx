@@ -1,7 +1,7 @@
-import { HamburgerButton } from "./HamburgerButton";
 import "../../styles/datail/songs.scss";
 import { ItemType } from "../../interfaces/playlist";
 import useSWRImmutable from "swr/immutable";
+import { HamburgerButton } from "./HamburgerButton";
 
 export const Songs = ({ apiEndpoint }: { apiEndpoint: string }) => {
   const { data: playlist } = useSWRImmutable(apiEndpoint);

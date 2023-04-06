@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { PlaylistType } from "../../interfaces/playlist";
 import { useNavigate } from "react-router-dom";
+import "../../styles/home/playlist.scss";
 
 type Props = {
   playlist: PlaylistType;
@@ -18,9 +19,9 @@ export const Playlist = ({ playlist }: Props) => {
   );
 
   return (
-    <div>
-      <div>{playlist.name}</div>
-      <button onClick={onClick}>voir</button>
+    <div className="playlist">
+      <div className="playlist__text">{playlist.name}</div>
+      <button className="playlist__button" onClick={onClick}>voir</button>
     </div>
   );
 };

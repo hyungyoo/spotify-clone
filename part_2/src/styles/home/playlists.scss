@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.playlists {
+  @extend .flex-center;
+  flex-direction: column;
+  @extend .home-item;
+  height: 60%;
+  font-size: 1rem;
+
+  &__text {
+    @extend .flex-center;
+    justify-content: flex-start;
+    width: 95%;
+    height: 10%;
+  }
+
+  &__list {
+    width: 95%;
+    height: 90%;
+    border: 2px solid white;
+    overflow-y: auto;
+  }
+}
+
+// @media screen and (max-width: 600px) {
+//   .playlist {
+
+//   }
+// }

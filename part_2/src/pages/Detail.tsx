@@ -9,8 +9,8 @@ export const Detail = () => {
   const apiEndpoint = location.state?.apiEndpoint;
   const { isLoading, error } = useSWRImmutable(apiEndpoint);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
+  if (isLoading) return <Background>Loading...</Background>;
+  if (error) return <Background>Error...</Background>;
   return (
     <Background>
       <PlaylistInfo apiEndpoint={apiEndpoint} />
