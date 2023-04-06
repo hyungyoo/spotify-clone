@@ -1,20 +1,20 @@
 import { useLocation } from "react-router-dom";
 import useSWRImmutable from "swr/immutable";
-import { Background } from "../components/Detail/Background";
 import { PlaylistInfo } from "../components/Detail/PlaylistInfo";
 import { Songs } from "../components/Detail/Songs";
+import { DetailBackground } from "../components/Detail/Background";
 
 export const Detail = () => {
   const location = useLocation();
   const apiEndpoint = location.state?.apiEndpoint;
   const { isLoading, error } = useSWRImmutable(apiEndpoint);
 
-  if (isLoading) return <Background>Loading...</Background>;
-  if (error) return <Background>Error...</Background>;
+  if (isLoading) return <DetailBackground>Loading...</DetailBackground>;
+  if (error) return <DetailBackground>Error...</DetailBackground>;
   return (
-    <Background>
+    <DetailBackground>
       <PlaylistInfo apiEndpoint={apiEndpoint} />
       <Songs apiEndpoint={apiEndpoint} />
-    </Background>
+    </DetailBackground>
   );
 };
