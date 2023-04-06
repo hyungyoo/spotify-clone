@@ -9,10 +9,10 @@ export const Songs = ({ apiEndpoint }: { apiEndpoint: string }) => {
   return (
     <ul className="songs">
       {playlist &&
-        playlist.tracks?.items.map((item: ItemType) => {
+        playlist.tracks?.items.map((item: ItemType, index: number) => {
           const key = item?.track.external_ids?.isrc;
           return (
-            <li className="song" key={key}>
+            <li className="song" key={index}>
               <div className="song__text">
                 <div className="song__text__song-name">
                   {item?.track?.album?.name}

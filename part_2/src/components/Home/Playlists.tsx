@@ -33,9 +33,10 @@ export const Playlists = ({ searchInput }: Props) => {
       <div className="playlists__list" onScroll={onScroll}>
         <ul>
           {playlists &&
-            playlists.map((playlist: PlaylistType) => {
+            playlists.map((playlist: PlaylistType, index: number) => {
+              const key = playlist.id ? playlist.id : index;
               return (
-                <li key={playlist.id}>
+                <li key={index}>
                   <Playlist playlist={playlist} />
                 </li>
               );
