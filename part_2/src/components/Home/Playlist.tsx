@@ -13,15 +13,19 @@ export const Playlist = ({ playlist }: Props) => {
   const onClick = useCallback(
     (event: React.MouseEvent<HTMLButtonElement>) => {
       event.preventDefault();
-      navigate("/playlist/aa", { state: { apiEndpoint: playlist?.href } });
+      navigate(`/playlist/${playlist?.name}`, {
+        state: { apiEndpoint: playlist?.href },
+      });
     },
-    [playlist?.href, navigate]
+    [playlist?.href, navigate, playlist?.name]
   );
 
   return (
     <div className="playlist">
       <div className="playlist__text">{playlist.name}</div>
-      <button className="playlist__button" onClick={onClick}>voir</button>
+      <button className="playlist__button" onClick={onClick}>
+        voir
+      </button>
     </div>
   );
 };
