@@ -13,10 +13,9 @@ export const Playlists = ({ searchInput }: Props) => {
 
   const onScroll = useCallback(
     (event: React.UIEvent<HTMLDivElement>) => {
-      if (
-        event.currentTarget.scrollTop + event.currentTarget.clientHeight ===
-        event.currentTarget.scrollHeight
-      ) {
+      const { scrollTop, clientHeight, scrollHeight } = event.currentTarget;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+      if (isAtBottom) {
         setSize(size + 1);
       }
     },
